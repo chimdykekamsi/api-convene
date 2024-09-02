@@ -1,1 +1,1 @@
-# This App is called My Events
+# Events API
