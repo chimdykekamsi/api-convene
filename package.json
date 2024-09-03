@@ -1,0 +1,33 @@
+{
+  "name": "events_api",
+  "version": "1.0.0",
+  "description": "make memories keep them",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chimdykekamsi/events_api.git"
+  },
+  "keywords": [
+    "events",
+    "memories",
+    "api"
+  ],
+  "author": "Chimdyke Kamsi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chimdykekamsi/events_api/issues"
+  },
+  "homepage": "https://github.com/chimdykekamsi/events_api#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "mongoose": "^8.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
