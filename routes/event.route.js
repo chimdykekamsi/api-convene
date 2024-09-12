@@ -5,5 +5,6 @@ const eventRouter = express.Router();
 
 eventRouter.route("/")
     .get(validateToken,fetchAll)
+    .post()
 
 module.exports = eventRouter;

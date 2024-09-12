@@ -8,5 +8,6 @@ hostRouter.get("/", validateToken, fetchAll);
 hostRouter.post("/register",checkForMissingFields(["name", "email", "password"]),hostRegister);
 hostRouter.post("/login",checkForMissingFields(["email","password"]),hostLogin);
 hostRouter.post("/validate",validateToken,authorizedHost);
+hostRouter.post("/email-verify/request")
 
 module.exports = hostRouter;

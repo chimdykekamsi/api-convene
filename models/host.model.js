@@ -10,7 +10,8 @@ const hostSchema = Mongoose.Schema(
                 type: Mongoose.Schema.Types.ObjectId,
                 ref: "Event"
             }
-        ]
+        ],
+        isVerified: { type: Boolean, default: false }
     },
     { timestamps: true }
 )

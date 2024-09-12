@@ -87,6 +87,29 @@ const fetchAll = asyncHandler(async(req,res)=>{
     res.status(201).json(hosts);
 })
 
+const requestEmailVerify = asyncHandler(async(req,res)=>{
+    const { validated } = req;
+    const ValidatedHost = await Host.findById(validated.id);
+    
+    if(!ValidatedHost) {
+        res.status(401);
+        throw new Error("Oops!, Access denied")
+    }
+
+    const {email} = validatedHost;
+    const hashedKey = crypto
+    .createHash("sha256")
+    .update(email)
+    .digest("hex");
+
+    // Send hashed key to email
+
+    return res.status(200).json({
+        status: true,
+        message: "Great Job!, Please check your inbox for a verification mail"
+    })
+})
+
 module.exports = {
     hostRegister,
     hostLogin,
